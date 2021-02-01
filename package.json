@@ -1,7 +1,7 @@
 {
   "name": "react-export-csv",
   "version": "0.0.1",
-  "description": "Made with create-react-library",
+  "description": "React Export CSV component",
   "author": "noah-lnt",
   "license": "MIT",
   "repository": "noah-lnt/react-export-csv",

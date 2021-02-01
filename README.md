@@ -25,13 +25,13 @@ npm install --save react-export-csv
 
 ### Import Component and style
 
-```bash
+```js
 import { ExportCSV } from 'react-export-csv'
 ```
 
 ### Render Component
 
-```bash
+```js
 <ExportCSV
   header={[
     {

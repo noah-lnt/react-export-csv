@@ -3,7 +3,7 @@ import React, { Fragment, useEffect } from 'react'
 export const ExportCSV = (props) => {
   useEffect(() => {
     const separator = props.separator || ';'
-    let data = ''
+    let data = '\uFEFF'
     if (props.header.length > 0 && props.data.length > 0) {
       props.header.map((elemHeader, keyHeader) => {
         data += `${keyHeader > 0 ? separator : ''}${elemHeader.name}`

@@ -6,15 +6,15 @@ export const ExportCSV = (props) => {
     let data = '\uFEFF'
     if (props.header.length > 0 && props.data.length > 0) {
       props.header.map((elemHeader, keyHeader) => {
-        data += `${keyHeader > 0 ? separator : ''}${elemHeader.name}`
+        data += `${keyHeader > 0 ? separator : ''}"${elemHeader.name}"`
       })
       props.data.map((elemData, keyData) => {
         data += '\n'
         props.header.map((elemHeader, keyHeader) => {
           // eslint-disable-next-line no-prototype-builtins
           const tmpData = elemData.hasOwnProperty(elemHeader.key)
-            ? elemData[elemHeader.key]
-            : ''
+            ? `"${elemData[elemHeader.key]}"`
+            : '""'
           data += `${keyHeader > 0 ? separator : ''}${tmpData}`
         })
       })

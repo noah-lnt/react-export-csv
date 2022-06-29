@@ -13,7 +13,7 @@ export const ExportCSV = (props) => {
         props.header.map((elemHeader, keyHeader) => {
           // eslint-disable-next-line no-prototype-builtins
           const tmpData = elemData.hasOwnProperty(elemHeader.key)
-            ? `"${elemData[elemHeader.key]}"`
+            ? `"${elemData[elemHeader.key] !== null ? elemData[elemHeader.key] : "" }"`
             : '""'
           data += `${keyHeader > 0 ? separator : ''}${tmpData}`
         })
